@@ -1,0 +1,5 @@
+module BootStrap
+singleton FontAwesome 1.0 FontAwesome.qml
+SIcon 1.0 SIcon.qml
+SButton 1.0 SButton.qml
+SInput 1.0 SInput.qml

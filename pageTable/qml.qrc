@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>BootStrap/FontAwesome.qml</file>
+        <file>BootStrap/fontawesome-4.7.0-webfont.ttf</file>
+        <file>BootStrap/OpenSans-Regular.ttf</file>
+        <file>BootStrap/qmldir</file>
+        <file>BootStrap/SButton.qml</file>
+        <file>BootStrap/SIcon.qml</file>
+        <file>BootStrap/SInput.qml</file>
+    </qresource>
+</RCC>
