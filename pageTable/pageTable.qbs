@@ -6,6 +6,7 @@ Project {
     CppApplication {
         Depends { name: "Qt.core" }
         Depends { name: "Qt.quick" }
+        Depends { name: "Qt.sql"}
 
         // Additional import path used to resolve QML modules in Qt Creator's code model
         property pathList qmlImportPaths: []
@@ -26,9 +27,11 @@ Project {
         ]
 
         files: [
+            "abstractpagemodel.cpp",
+            "abstractpagemodel.h",
             "main.cpp",
-            "pagemodel.cpp",
-            "pagemodel.h",
+            "pagemodeltest.cpp",
+            "pagemodeltest.h",
             "qml.qrc",
         ]
 

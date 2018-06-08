@@ -12,8 +12,10 @@ Window {
     title: qsTr("Hello World")
     flags: Qt.FramelessWindowHint | Qt.Window | Qt.WindowSystemMenuHint | Qt.WindowMinimizeButtonHint
 
-    PageModel {
+    PageModelTest {
         id: pageModel
+        tableName: "test";
+        resultCurrent: 10;
     }
 
     Item {
@@ -37,6 +39,11 @@ Window {
             source: topBar
         }
 
+//        ListModel {
+//            id: listModel
+//            ListElement { pid: "1"; name: "kason"; age: 25; }
+//        }
+
         QQC14.TableView {
             id: pageTable
             anchors {
@@ -49,17 +56,25 @@ Window {
                 rightMargin: 5
             }
 
-            QQC14.TableViewColumn {
+            model: pageModel;
+//            model:listModel;
 
+            Component.onCompleted: pageModel.initialize();
+
+            QQC14.TableViewColumn {
+                title: "ID"
+                role: "pid"
+                width: 200;
             }
             QQC14.TableViewColumn {
-
+                title: "Name"
+                role: "name"
+                width: 200;
             }
             QQC14.TableViewColumn {
-
-            }
-            QQC14.TableViewColumn {
-
+                title: "Age"
+                role: "age"
+                width: 200;
             }
         }
 
@@ -99,26 +114,28 @@ Window {
                     text: "首页";
                     icon_: FontAwesome.fa_fast_backward;
                     font.pixelSize: 14;
-                    font.family: FontAwesome.fontOpenSans.name;
+                    font.family: "微软雅黑";
                     anchors.verticalCenter: parent.verticalCenter;
-
+                    onClicked: pageModel.first();
                 }
                 SButton {
                     style: "btn-custom";
                     text: "上一页";
                     icon_: FontAwesome.fa_backward;
                     font.pixelSize: 14;
-                    font.family: FontAwesome.fontOpenSans.name;
+                    font.family: "微软雅黑";
                     anchors.verticalCenter: parent.verticalCenter;
+                    onClicked: pageModel.previous();
                 }
+
                 SButton {
                     style: "btn-custom";
                     text: "下一页";
                     icon_: FontAwesome.fa_forward;
                     font.pixelSize: 14;
-                    font.family: "微软雅黑"//FontAwesome.fontOpenSans.name;
+                    font.family: "微软雅黑"
                     anchors.verticalCenter: parent.verticalCenter;
-                    borderColor: "black"
+                    onClicked: pageModel.next();
                 }
                 SButton {
                     style: "btn-custom";
@@ -127,7 +144,7 @@ Window {
                     font.pixelSize: 14;
                     font.family: FontAwesome.fontOpenSans.name;
                     anchors.verticalCenter: parent.verticalCenter;
-                    borderColor: "black"
+                    onClicked: pageModel.last();
                 }
             }
         }
