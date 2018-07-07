@@ -1,13 +1,4 @@
-﻿/********************************************************************
-* Copyright (c) 2016,深圳市达科为医疗科技有限公司
-* All rights reserved.
-*
-* 文件名称： abstractpagemodel.cpp
-* 文件摘要： 部件监控管理类
-* 修订历史：    Date               Author             Modification
-*            1.2018-6-11           Yinkai             Create
-********************************************************************/
-#include "abstractpagemodel.h"
+﻿#include "abstractpagemodel.h"
 #include <QSqlDatabase>
 #include <QSqlError>
 #include <QDebug>

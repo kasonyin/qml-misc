@@ -1,13 +1,4 @@
-﻿/********************************************************************
-* Copyright (c) 2016,深圳市达科为医疗科技有限公司
-* All rights reserved.
-*
-* 文件名称： abstractpagemodel.h
-* 文件摘要： 翻页控件 Model 类
-* 修订历史：    Date               Author             Modification
-*            1.2018-6-11           Yinkai             Create
-********************************************************************/
-#ifndef ABSTRACTPAGEMODEL_H
+﻿#ifndef ABSTRACTPAGEMODEL_H
 #define ABSTRACTPAGEMODEL_H
 
 #include <QAbstractListModel>
