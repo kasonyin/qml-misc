@@ -5,6 +5,7 @@
 qml-misc collects small, easy-to-use QML components to address some of the requirements that might be needed
 
 ##已有的控件列表
+
 |控件名|描述
 |:-|:-|
 | DragArea| 继承自 `MouseArea` 的无边框 App 拖动帮助组件
